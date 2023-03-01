@@ -1,0 +1,4 @@
+fastapi
+uvicorn[standard]
+pyngrok
+nest_asyncio
