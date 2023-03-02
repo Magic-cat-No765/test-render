@@ -28,4 +28,4 @@ if __name__ == '__main__':
     app.ngrok_url = ngrok.connect(addr=mc_port, proto='tcp')
     print(app.ngrok_url)
     nest_asyncio.apply()
-    uvicorn.run(app)
+    uvicorn.run(app, port=web_port)

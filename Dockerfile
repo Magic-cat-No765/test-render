@@ -7,4 +7,6 @@ RUN gdown https://drive.google.com/uc?id=1h1HNtGJFAoSvJzUKCSOkPkhshW9bVchJ -O ./
 WORKDIR ./mc/server/
 COPY web/ .
 RUN pip install -r requirements.txt
+EXPOSE 80
+EXPOSE 25565
 CMD python3 ./main.py
