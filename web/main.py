@@ -21,13 +21,14 @@ def mc_server():
 
 
 if __name__ == '__main__':
-    mc_port = 25565
-    web_port = 80
-    t = threading.Thread(target=mc_server)
-    t.daemon = True
-    t.start()
-    ngrok.set_auth_token(os.getenv('NGROK_AUTH'))
-    app.ngrok_url = ngrok.connect(addr=mc_port, proto='tcp')
-    print(app.ngrok_url)
-    nest_asyncio.apply()
-    uvicorn.run(app)
+    # mc_port = 25565
+    # web_port = 80
+    # t = threading.Thread(target=mc_server)
+    # t.daemon = True
+    # t.start()
+    # ngrok.set_auth_token(os.getenv('NGROK_AUTH'))
+    # app.ngrok_url = ngrok.connect(addr=mc_port, proto='tcp')
+    # print(app.ngrok_url)
+    # nest_asyncio.apply()
+    # uvicorn.run(app)
+    mc_server()
