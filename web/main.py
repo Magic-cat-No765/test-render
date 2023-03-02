@@ -1,19 +1,18 @@
-import os
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+# from fastapi import FastAPI
+# from fastapi.responses import HTMLResponse
 import uvicorn
-import nest_asyncio
-from pyngrok import ngrok
+# import nest_asyncio
+# from pyngrok import ngrok
 import os
 import threading
 
-app = FastAPI()
-app.ngrok_url = ''
+# app = FastAPI()
+# app.ngrok_url = ''
 
-
-@app.get('/', response_class=HTMLResponse)
-def index():
-    return f"URL: {app.ngrok_url.public_url}"
+#
+# @app.get('/', response_class=HTMLResponse)
+# def index():
+#     return f"URL: {app.ngrok_url.public_url}"
 
 
 def mc_server():
