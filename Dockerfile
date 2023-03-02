@@ -8,4 +8,5 @@ WORKDIR ./mc/server/
 COPY web/ .
 RUN pip install -r requirements.txt
 EXPOSE 8000
+EXPOSE 25565
 CMD python3 ./main.py
