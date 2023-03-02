@@ -1,5 +1,7 @@
 /mc/*
 /mc/
-
+/web/*
+!/web/main.py
+!/web/requirements.txt
 **/.idea/
 **/.idea/**
