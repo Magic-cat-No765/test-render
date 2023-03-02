@@ -6,4 +6,5 @@ COPY ./web/* ./web/*
 RUN mkdir ./mc/
 RUN gdown https://drive.google.com/uc?id=1h1HNtGJFAoSvJzUKCSOkPkhshW9bVchJ -O ./mc/mc.tar.gz && tar -xf ./mc/mc.tar.gz && rm ./mc/mc.tar.gz && mv ./Minecraft_1.14.4_Portable/Minecraft\ 1.14.4\ Portable/* ./mc/ && rm -rf ./Minecraft_1.14.4_Portable
 WORKDIR ./web/
-CMD python3 main.py
+RUN pip install -r requirements.txt
+CMD python3 ./main.py
