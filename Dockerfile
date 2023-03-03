@@ -5,8 +5,8 @@ RUN apt-get update && apt-get -y install python3 python3-pip && pip install gdow
 RUN mkdir ./mc/
 RUN gdown https://drive.google.com/uc?id=1h1HNtGJFAoSvJzUKCSOkPkhshW9bVchJ -O ./mc/mc.tar.gz && tar -xf ./mc/mc.tar.gz && rm ./mc/mc.tar.gz && mv ./Minecraft_1.14.4_Portable/Minecraft\ 1.14.4\ Portable/* ./mc/ && rm -rf ./Minecraft_1.14.4_Portable
 WORKDIR ./mc/server/
-COPY web/ .
-RUN pip install -r requirements.txt
-EXPOSE 8000
+# COPY web/ .
+# RUN pip install -r requirements.txt
+# EXPOSE 8000
 EXPOSE 25565
-CMD python3 ./main.py
+CMD java -Xmx500M -Xms300M -jar minecraft_server.1.14.4.jar nogui
