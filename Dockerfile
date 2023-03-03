@@ -9,4 +9,4 @@ WORKDIR ./mc/server/
 # RUN pip install -r requirements.txt
 # EXPOSE 8000
 EXPOSE 25565
-CMD java -Xmx500M -Xms300M -jar minecraft_server.1.14.4.jar nogui
+CMD java -Xmx400M -Xms300M -jar minecraft_server.1.14.4.jar nogui
